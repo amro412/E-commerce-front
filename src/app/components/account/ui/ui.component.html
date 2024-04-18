@@ -1,0 +1,8 @@
+<div class="a">
+    <div class="container" id="container">
+    
+        <app-signup *ngIf="!showSignup"></app-signup>
+        <app-login *ngIf="showSignup"></app-login>
+        <app-toggle (toggleChange)="onToggleChange($event)"></app-toggle>
+    </div>
+</div>

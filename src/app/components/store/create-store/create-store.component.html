@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <h2>Create Store</h2>
+    <form (ngSubmit)="onSubmit(storeForm)" #storeForm="ngForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Store Name: </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              [(ngModel)]="store.name"
+              required
+            />
+        </div>
+        <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone Number: </label>
+            <input
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              class="form-control"
+              [(ngModel)]="store.phoneNumber"
+              required
+            />
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">City: </label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              class="form-control"
+              [(ngModel)]="store.city"
+              required
+            />
+        </div>
+        <button 
+            type="submit" 
+            class="btn btn-primary"
+            [disabled]="!storeForm.valid"
+        >
+            Create Store
+        </button>
+    </form>
+</div>

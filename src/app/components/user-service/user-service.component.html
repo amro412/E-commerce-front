@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<table class="table table-bordered table-hover text-center container">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Email</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Password</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.password}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="activate(user.id)">Activate</button>
+                <button class="btn btn-danger" style="margin-left: 2%;" (click)="deactivate(user.id)">Deactivate</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
